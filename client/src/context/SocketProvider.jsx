@@ -21,7 +21,7 @@ const SocketProvider = ({ children }) => {
       }
     })
     setSocket(newSocket)
-    return () => newSocket.close()
+    // return () => newSocket.close()
 
   }, [id])
   return (

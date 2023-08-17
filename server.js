@@ -29,7 +29,12 @@ const server = http.createServer(app); // Create HTTP server instance
 
 
 //middelwares
-app.use(cors());
+app.use(cors(
+  {
+    origin: 'http://localhost:8000',
+    methods: "*",
+  }
+));
 // app.use(express.json());
 
 // Increase payload size limits for JSON and URL-encoded bodies
@@ -39,7 +44,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }));
 // Socket.IO configuration
 const io = new Server(server, {
     cors: {
-      origin: 'https://echoapp.vercel.app',
+      origin: 'http://localhost:8000',
       methods: ['GET', 'POST'],
       allowedHeaders: ['my-custom-header'],
       credentials: true

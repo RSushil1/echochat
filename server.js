@@ -29,9 +29,7 @@ const server = http.createServer(app); // Create HTTP server instance
 
 
 //middelwares
-app.use(cors({
-    origin: 'https://echoapp.vercel.app'
-  }));
+app.use(cors());
 // app.use(express.json());
 
 // Increase payload size limits for JSON and URL-encoded bodies

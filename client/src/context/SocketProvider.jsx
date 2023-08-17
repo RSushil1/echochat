@@ -22,6 +22,11 @@ const SocketProvider = ({ children }) => {
     })
     setSocket(newSocket)
     // return () => newSocket.close()
+    return () => {
+      if (newSocket.readyState === 1) {
+          newSocket.close();
+      }
+  }
 
   }, [id])
   return (

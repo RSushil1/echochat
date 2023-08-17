@@ -31,7 +31,7 @@ const server = http.createServer(app); // Create HTTP server instance
 //middelwares
 app.use(cors(
   {
-    origin: 'http://localhost:8000',
+    origin: 'https://echoapp.vercel.app',
     methods: "*",
   }
 ));
@@ -44,7 +44,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }));
 // Socket.IO configuration
 const io = new Server(server, {
     cors: {
-      origin: 'http://localhost:8000',
+      origin: 'https://echoapp.vercel.app',
       methods: ['GET', 'POST'],
       allowedHeaders: ['my-custom-header'],
       credentials: true

@@ -15,7 +15,6 @@ const SocketProvider = ({ children }) => {
   useEffect(() => {
     const newSocket = io(`wss://echoapp.vercel.app`, {
       query: { id },
-      transports: ["websocket"],
       withCredentials: true,
       extraHeaders: {
         "my-custom-header": "abcd"

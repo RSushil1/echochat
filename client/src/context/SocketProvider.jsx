@@ -13,7 +13,7 @@ const SocketProvider = ({ children }) => {
   const id = auth?.user?._id
 
   useEffect(() => {
-    const newSocket = io(`wss://echoapp.vercel.app`, {
+    const newSocket = io(`ws://echoapp.vercel.app`, {
       query: { id },
       withCredentials: true,
       extraHeaders: {

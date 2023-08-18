@@ -1,6 +1,6 @@
 {
   "name": "whatsappclone",
-  "proxy": "https://echoapp.vercel.app",
+  "proxy": "http://localhost:8000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
